@@ -49,6 +49,12 @@
                     ]
                   },
                   {
+                    "title": "Non Tunable White Light Bulb",
+                    "enum": [
+                      "NonTWLight"
+                    ]
+                  },
+                  {
                     "title": "Smart Power Strip",
                     "enum": [
                       "MultiOutlet"
@@ -195,20 +201,20 @@
                 "type": "integer",
                 "placeholder": "1",
                 "condition": {
-                  "functionBody": "return model.devices && model.devices[arrayIndices] && ['Outlet', 'TWLight', 'RGBTWLight', 'SimpleDimmer','RGBTWOutlet'].includes(model.devices[arrayIndices].type);"
+                  "functionBody": "return model.devices && model.devices[arrayIndices] && ['Outlet', 'TWLight', 'NonTWLight', 'RGBTWLight', 'SimpleDimmer','RGBTWOutlet'].includes(model.devices[arrayIndices].type);"
                 }
               },
               "dpBrightness": {
                 "type": "integer",
                 "placeholder": "2",
                 "condition": {
-                  "functionBody": "return model.devices && model.devices[arrayIndices] && ['TWLight', 'RGBTWLight', 'SimpleDimmer','RGBTWOutlet'].includes(model.devices[arrayIndices].type);"
+                  "functionBody": "return model.devices && model.devices[arrayIndices] && ['TWLight', 'NonTWLight', 'RGBTWLight', 'SimpleDimmer','RGBTWOutlet'].includes(model.devices[arrayIndices].type);"
                 }
               },
               "dpColorTemperature": {
                 "type": "integer",
                 "condition": {
-                  "functionBody": "return model.devices && model.devices[arrayIndices] && ['TWLight', 'RGBTWLight','RGBTWOutlet'].includes(model.devices[arrayIndices].type);"
+                  "functionBody": "return model.devices && model.devices[arrayIndices] && ['TWLight', 'NonTWLight', 'RGBTWLight','RGBTWOutlet'].includes(model.devices[arrayIndices].type);"
                 }
               },
               "minWhiteColor": {
@@ -223,6 +229,13 @@
                 "placeholder": "400",
                 "condition": {
                   "functionBody": "return model.devices && model.devices[arrayIndices] && ['TWLight', 'RGBTWLight','RGBTWOutlet'].includes(model.devices[arrayIndices].type);"
+                }
+              },
+              "colorTemperature": {
+                "type": "integer",
+                "placeholder": "140",
+                "condition": {
+                  "functionBody": "return model.devices && model.devices[arrayIndices] && ['NonTWLight'].includes(model.devices[arrayIndices].type);"
                 }
               },
               "dpMode": {
