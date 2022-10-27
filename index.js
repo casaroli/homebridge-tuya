@@ -9,6 +9,7 @@ const RGBTWLightAccessory = require('./lib/RGBTWLightAccessory');
 const RGBTWOutletAccessory = require('./lib/RGBTWOutletAccessory');
 const TWLightAccessory = require('./lib/TWLightAccessory');
 const NonTWLightAccessory = require('./lib/NonTWLightAccessory');
+const DimLightAccessory = require('./lib/DimLightAccessory');
 const AirConditionerAccessory = require('./lib/AirConditionerAccessory');
 const AirPurifierAccessory = require('./lib/AirPurifierAccessory');
 const DehumidifierAccessory = require('./lib/DehumidifierAccessory');
@@ -35,6 +36,7 @@ const CLASS_DEF = {
     rgbtwoutlet: RGBTWOutletAccessory,
     twlight: TWLightAccessory,
     nontwlight: NonTWLightAccessory,
+    dimlight: DimLightAccessory,
     multioutlet: MultiOutletAccessory,
     custommultioutlet: CustomMultiOutletAccessory,
     airconditioner: AirConditionerAccessory,

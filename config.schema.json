@@ -55,6 +55,12 @@
                     ]
                   },
                   {
+                    "title": "Dimmable Light Bulb",
+                    "enum": [
+                      "DimLight"
+                    ]
+                  },
+                  {
                     "title": "Smart Power Strip",
                     "enum": [
                       "MultiOutlet"
@@ -201,14 +207,14 @@
                 "type": "integer",
                 "placeholder": "1",
                 "condition": {
-                  "functionBody": "return model.devices && model.devices[arrayIndices] && ['Outlet', 'TWLight', 'NonTWLight', 'RGBTWLight', 'SimpleDimmer','RGBTWOutlet'].includes(model.devices[arrayIndices].type);"
+                  "functionBody": "return model.devices && model.devices[arrayIndices] && ['Outlet', 'TWLight', 'DimLight', 'NonTWLight', 'RGBTWLight', 'SimpleDimmer','RGBTWOutlet'].includes(model.devices[arrayIndices].type);"
                 }
               },
               "dpBrightness": {
                 "type": "integer",
                 "placeholder": "2",
                 "condition": {
-                  "functionBody": "return model.devices && model.devices[arrayIndices] && ['TWLight', 'NonTWLight', 'RGBTWLight', 'SimpleDimmer','RGBTWOutlet'].includes(model.devices[arrayIndices].type);"
+                  "functionBody": "return model.devices && model.devices[arrayIndices] && ['TWLight', 'DimLight', 'NonTWLight', 'RGBTWLight', 'SimpleDimmer','RGBTWOutlet'].includes(model.devices[arrayIndices].type);"
                 }
               },
               "dpColorTemperature": {
